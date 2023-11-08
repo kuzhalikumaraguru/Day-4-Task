@@ -180,14 +180,14 @@ var rotate = function (arr) {
     for (var i = 0; i < 3; i++){
         arr.push(arr.shift());
     }
-    console.log(arr)
+    console.log(arr, "Using anonymous function - Rotate the array by k-times");
 }
-rotate([1, 2, 3, 4, 5], "Using anonymous function - Rotate the array by k-times");
+rotate([1, 2, 3, 4, 5]);
 
 (function (arr) {
     for (var i = 0; i < 3; i++){
         arr.push(arr.shift());
     }
-    console.log(arr)
-})([1, 2, 3, 4, 5], "Using IIFE function - Rotate the array by k-times");
+    console.log(arr, "Using IIFE function - Rotate the array by k-times");
+})([1, 2, 3, 4, 5]);
 
