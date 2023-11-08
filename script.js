@@ -97,4 +97,97 @@ var sumArrow = (arr) => {
 sumArrow(array);
 console.log(sumArrow(array), "Using arrow function - Sum of all numbers in an array")
 
+// 5. Return all palindromes in an array
+
+var fun = function (arr) {
+    let result = [];
+    for (var i = 0; i < arr.length; i++){
+        var res = arr[i].split("").reverse().join("");
+        if (res === arr[i]) {
+            result.push(arr[i]);
+        }
+    }
+    console.log(result, "Using Anonymous function - Return all palindromes in an array")
+}
+fun(["madam", "sir", "mom", "dad", "pop", "miss"]);
+
+(function (arr) {
+    let result = [];
+    for (var i = 0; i < arr.length; i++){
+        var res = arr[i].split("").reverse().join("");
+        if (res === arr[i]) {
+            result.push(arr[i]);
+        }
+    }
+    console.log(result, "Using IIFE function - Return all palindromes in an array")
+})(["madam", "sir", "mom", "dad", "pop", "miss"]);
+
+var palindrome = (arr) => {
+    let result = [];
+    for (var i = 0; i < arr.length; i++){
+        var res = arr[i].split("").reverse().join("");
+        if (res === arr[i]) {
+            result.push(arr[i]);
+        }
+    }
+    console.log(result, "Using arrow function - Return all palindromes in an array")
+}
+palindrome(["madam", "sir", "mom", "dad", "pop", "miss"]);
+
+// 6. Median of two sorted arrays
+
+var median = function (arr1, arr2) {
+    let arr = [...arr1, ...arr2];
+    arr.sort((a, b) => a - b);
+    var n = arr.length;
+    if (arr.length % 2 === 0) {
+        var res = (arr[n / 2] + arr[n / 2 - 1]) / 2;
+    } else {
+        var res = Math.floor(arr[n/2]);
+    }
+    console.log(res, "Using anonymous function - Return the median of two sorted array");
+}
+median([1, 2, 3, 4, 5], [3, 5, 7, 8, 9]);
+
+(function (arr1, arr2) {
+    let arr = [...arr1, ...arr2];
+    arr.sort((a, b) => a - b);
+    var n = arr.length;
+    if (arr.length % 2 === 0) {
+        var res = (arr[n / 2] + arr[n / 2 - 1]) / 2;
+    } else {
+        var res = Math.floor(arr[n/2]);
+    }
+    console.log(res, "Using IIFE function - Return the median of two sorted array");
+})([1, 2, 3, 4, 5], [3, 5, 7, 8, 9]);
+
+var median = (arr1, arr2) => {
+    let arr = [...arr1, ...arr2];
+    arr.sort((a, b) => a - b);
+    var n = arr.length;
+    if (arr.length % 2 === 0) {
+        var res = (arr[n / 2] + arr[n / 2 - 1]) / 2;
+    } else {
+        var res = Math.floor(arr[n/2]);
+    }
+    console.log(res, "Using arrow function - Return the median of two sorted array");
+}
+median([1, 2, 3, 4, 5], [3, 5, 7, 8, 9]);
+
+// 7. Rotate an array by k - times
+
+var rotate = function (arr) {
+    for (var i = 0; i < 3; i++){
+        arr.push(arr.shift());
+    }
+    console.log(arr)
+}
+rotate([1, 2, 3, 4, 5], "Using anonymous function - Rotate the array by k-times");
+
+(function (arr) {
+    for (var i = 0; i < 3; i++){
+        arr.push(arr.shift());
+    }
+    console.log(arr)
+})([1, 2, 3, 4, 5], "Using IIFE function - Rotate the array by k-times");
 
